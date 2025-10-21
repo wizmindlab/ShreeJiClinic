@@ -12,11 +12,16 @@
     <nav>
         <div class="container nav-container">
             <div class="logo">Shree Ji Homoeopathic Clinic</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#services" onclick="closeMenu()">Services</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -73,7 +78,7 @@
             <div class="contact-info">
                 <div>
                     <h3>Clinic Address</h3>
-                    <p>D-2 Sultanpuri</p>
+                    <p>D-2/221, Sultanpuri</p>
                     <p>Delhi, India</p>
                 </div>
                 <div>
@@ -98,5 +103,16 @@
             <p class="tagline">Healing Naturally, Caring Personally.</p>
         </div>
     </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+        
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.remove('active');
+        }
+    </script>
 </body>
 </html>
